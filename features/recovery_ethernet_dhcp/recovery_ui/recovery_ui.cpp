@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
+#include <android-base/properties.h>
 #include <recovery_ui/ethernet_device.h>
 #include <recovery_ui/ethernet_ui.h>
 
-class CuttlefishRecoveryUI : public EthernetRecoveryUI {
+class EthernetDhcpRecoveryUI : public EthernetRecoveryUI {
   public:
     bool IsUsbConnected() override {
       return true;
@@ -25,5 +26,6 @@ class CuttlefishRecoveryUI : public EthernetRecoveryUI {
 };
 
 Device* make_device() {
-    return new EthernetDevice(new CuttlefishRecoveryUI, "eth1");
+    std::string eth_device = android::base::GetProperty("vendor.recovery.ethernet.dhcp.iface", "eth0");
+    return new EthernetDevice(new EthernetDhcpRecoveryUI, eth_device);
 }

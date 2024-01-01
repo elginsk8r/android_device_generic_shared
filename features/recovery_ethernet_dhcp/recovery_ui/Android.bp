@@ -19,7 +19,7 @@ package {
 }
 
 cc_library_static {
-    name: "librecovery_ui_cuttlefish",
+    name: "librecovery_ui_ethernet_dhcp",
     owner: "google",
     cflags: [
         "-Wall",

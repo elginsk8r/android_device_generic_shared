@@ -1,6 +1,8 @@
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/generic/shared/features/recovery_ethernet_dhcp/sepolicy/vendor
 
+TARGET_RECOVERY_UI_LIB := librecovery_ui_ethernet_dhcp
+
 PRODUCT_PACKAGES += \
     recovery_ethernet_dhcp.rc \
     shared_dhcpclient.recovery
