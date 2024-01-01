@@ -1,0 +1,2 @@
+# Reference: device/google/cuttlefish/shared/sepolicy/vendor/file_contexts
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.cuttlefish	u:object_r:hal_health_default_exec:s0
