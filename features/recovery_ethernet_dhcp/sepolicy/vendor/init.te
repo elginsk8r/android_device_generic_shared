@@ -1,0 +1,4 @@
+recovery_only(`
+set_prop(init, vendor_recovery_ethernet_dhcp_prop)
+get_prop(init, vendor_recovery_ethernet_dhcp_prop)
+')

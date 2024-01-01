@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "recovery_ethernet_dhcp.rc",
+    src: "recovery_ethernet_dhcp.rc",
+    sub_dir: "init",
+    recovery: true,
+}
