@@ -8,7 +8,7 @@ DEVICE_MANIFEST_FILE += \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
-    hwcomposer.drm
+    hwcomposer.drm$(TARGET_HWC2_DRM_VARIANT)
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.hwcomposer?=drm
+    ro.hardware.hwcomposer?=drm$(TARGET_HWC2_DRM_VARIANT)
