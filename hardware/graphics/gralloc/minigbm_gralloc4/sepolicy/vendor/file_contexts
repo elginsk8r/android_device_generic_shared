@@ -1,4 +1,4 @@
 # Reference: android-12 device/google/cuttlefish/shared/sepolicy/vendor/file_contexts
 
-/(vendor|system/vendor)/bin/hw/android\.hardware\.graphics\.allocator@4\.0-service\.minigbm	u:object_r:hal_graphics_allocator_default_exec:s0
-/(vendor|system/vendor)/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl\.minigbm\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.graphics\.allocator@4\.0-service\.minigbm(|_arcvm|_intel|_msm)	u:object_r:hal_graphics_allocator_default_exec:s0
+/(vendor|system/vendor)/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl\.minigbm(|_arcvm|_intel|_msm)\.so	u:object_r:same_process_hal_file:s0
