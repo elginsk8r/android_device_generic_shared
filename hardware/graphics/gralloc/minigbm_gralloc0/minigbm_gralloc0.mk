@@ -8,8 +8,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    gralloc.minigbm
+    gralloc.minigbm$(TARGET_GRALLOC0_MINIGBM_VARIANT)
 
 # Reference: device/generic/goldfish/fvpbase/init.qemu.rc
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.gralloc?=minigbm
+    ro.hardware.gralloc?=minigbm$(TARGET_GRALLOC0_MINIGBM_VARIANT)
