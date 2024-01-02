@@ -1,0 +1,4 @@
+# Reference: device/generic/goldfish/fvpbase/sepolicy/file_contexts
+
+/(vendor|system/vendor)/lib(64)?/hw/gralloc\.minigbm\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libminigbm_gralloc.so		u:object_r:same_process_hal_file:s0
