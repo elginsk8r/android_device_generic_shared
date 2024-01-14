@@ -1,5 +1,6 @@
 # References:
 # device/linaro/dragonboard/full.mk
+# device/generic/goldfish/fvp.mk
 # device/google/cuttlefish/shared/graphics/device_vendor.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
@@ -19,6 +20,12 @@ DEVICE_MANIFEST_FILE += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-impl \
     android.hardware.graphics.composer@2.3-service
+else ifeq ($(TARGET_HWC2_HIDL_VERSION),2.1)
+DEVICE_MANIFEST_FILE += \
+    device/generic/shared/hardware/graphics/composer/drm_hwcomposer/drm_hwcomposer_2_1.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
 endif
 
 PRODUCT_PACKAGES += \

@@ -10,3 +10,9 @@ allow hal_graphics_composer_default kmsg_device:chr_file w_file_perms;
 # Supress warnings for drm_hwcomposer trying to read some vendor.hwc.*
 # properties as Cuttlefish never configures these properties.
 dontaudit hal_graphics_composer_default default_prop:file read;
+
+# Reference: device/generic/goldfish/sepolicy/common/hal_graphics_composer_default.te
+allow hal_graphics_composer_default graphics_device:chr_file { ioctl open read write map };
+allow hal_graphics_composer_default gpu_device:chr_file { ioctl open read write map };
+allow hal_graphics_composer_default self:vsock_socket create_socket_perms_no_ioctl;
+allow hal_graphics_composer_default hal_graphics_allocator_default:vsock_socket { read write getattr };
