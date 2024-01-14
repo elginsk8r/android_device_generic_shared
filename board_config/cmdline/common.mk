@@ -5,7 +5,7 @@
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 
 # Print audit messages for all security check failures
-BOARD_KERNEL_CMDLINE += audit=1
+#BOARD_KERNEL_CMDLINE += audit=1
 
 # Reboot immediately on panic
 BOARD_KERNEL_CMDLINE += panic=-1
